@@ -12,10 +12,10 @@ import { checkUserSession } from './redux/user/user.actions';
 
 import { GlobalStyle } from './global.styles';
 
-const HomePage = lazy(() => import('./pages/container/homepage/homepage.component'));
-const ShopPage = lazy(() => import('./pages/container/shop/shop.component'));
-const SignInAndSignUpPage = lazy(() => import('./pages/container/sign-in-and-sign-up/sign-in-and-sign-up.component'));
-const CheckoutPage = lazy(() => import('./pages/container/checkout/checkout.component'));
+const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
+const ShopPage = lazy(() => import('./pages/shop/shop.component'));
+const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
+const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
 
 const App = ({ checkUserSession, currentUser }) => {
