@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export const CheckoutPageContainer = styled.div`
+.checkoutPageContainer {
   width: 55%;
   min-height: 90vh;
   display: flex;
@@ -12,34 +10,34 @@ export const CheckoutPageContainer = styled.div`
     margin-left: auto;
     margin-top: 50px;
   }
-`;
+}
 
-export const CheckoutHeaderContainer = styled.div`
+.checkoutHeaderContainer {
   width: 100%;
   height: 40px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
-`;
+}
 
-export const HeaderBlockContainer = styled.div`
+.headerBlockContainer {
   text-transform: capitalize;
   width: 23%;
 
   &:last-child {
     width: 8%;
   }
-`;
+}
 
-export const TotalContainer = styled.div`
+.totalContainer {
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
-`;
+}
 
-export const WarningContainer = styled.div`
+.warningContainer {
   text-align: center;
   margin-top: 40px;
   font-size: 24px;
   color: red;
-`;
+}
