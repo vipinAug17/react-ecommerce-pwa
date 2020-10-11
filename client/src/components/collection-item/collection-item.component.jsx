@@ -5,14 +5,18 @@ import { withRouter } from "react-router-dom";
 import { addItem } from "../../redux/cart/cart.actions";
 
 import CustomButton from "../custom-button/custom-button.component";
+import ItemNamePrice from "../item-name-price/item-name-price.component";
 
 import "./collection-item.styles.scss";
+
+import { ReactComponent as Favorite } from "../../assets/favorite.svg";
 
 const CollectionItem = ({ item, addItem, history, linkUrl, match }) => {
   const { name, price, imageUrl } = item;
 
   return (
     <div className="collection-item">
+    <button onClick={history.goBack}>go back</button>
       <div
         className="clickable"
         onClick={() =>
@@ -29,15 +33,15 @@ const CollectionItem = ({ item, addItem, history, linkUrl, match }) => {
           }}
         />
       </div>
+      <button className="fav">
+        <Favorite />
+      </button>
       {/*
         <CustomButton onClick={() => addItem(item)} inverted>
         Add to cart
         </CustomButton>
       */}
-      <div className="collection-footer">
-        <span className="name">{name}</span>
-        <span className="price">{price}</span>
-      </div>
+      <ItemNamePrice name={name} price={price} />
     </div>
   );
 };

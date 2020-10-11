@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
 
+import MobileHeader from "../../components/mobile-header/mobile-header.component";
 import CollectionsOverviewContainer from "../../components/collections-overview/collections-overview.container";
 import CollectionPageContainer from "../collection/collection.container";
 
@@ -14,6 +15,7 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
 
   return (
     <div className="shop-page">
+      <MobileHeader />
       <Route
         exact
         path={`${match.path}`}

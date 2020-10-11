@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import Header from './components/header/header.component';
+import MobileHeader from './components/mobile-header/mobile-header.component';
+import MobileMenu from './components/mobile-menu/mobile-menu.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
@@ -17,6 +19,8 @@ const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const ProductPage = lazy(() => import('./pages/product/product.component'));
 const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
+const Profile = lazy(() => import('./pages/profile/profile.component'));
+const Wishlist = lazy(() => import('./pages/wishlist/wishlist.component'));
 
 
 const App = ({ checkUserSession, currentUser }) => {
@@ -25,8 +29,12 @@ const App = ({ checkUserSession, currentUser }) => {
   }, [checkUserSession]);
 
   return (
-    <div> 
-      <Header />
+    <main className="app-container">
+
+    {/*
+      <MobileHeader />
+      <Header />  
+    */}
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
@@ -34,6 +42,13 @@ const App = ({ checkUserSession, currentUser }) => {
             <Route path='/shop' component={ShopPage} />
             <Route path='/product/:productId' component={ProductPage} />
             <Route exact path='/checkout' component={CheckoutPage} />
+            <Route exact path='/wishlist' component={Wishlist} />
+            <Route exact path='/profile'
+              render={() =>
+                currentUser ?
+                  <Profile /> : <Redirect to='/signin' />
+              }
+            />
             <Route
               exact
               path='/signin'
@@ -45,7 +60,11 @@ const App = ({ checkUserSession, currentUser }) => {
           </Suspense>
         </ErrorBoundary>
       </Switch>
-    </div>
+
+      {/*
+        <MobileMenu />
+      */}
+    </main>
   );
 }
 

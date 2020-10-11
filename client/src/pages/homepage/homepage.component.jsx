@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import Directory from '../../components/directory/directory.component';
+import MobileMenu from "../../components/mobile-menu/mobile-menu.component";
+import Directory from "../../components/directory/directory.component";
 
-import './homepage.styles.scss';
+import "./homepage.styles.scss";
 
 const HomePage = () => (
   <div className="homePageContainer">
     <Directory />
+    <MobileMenu />
   </div>
 );
 

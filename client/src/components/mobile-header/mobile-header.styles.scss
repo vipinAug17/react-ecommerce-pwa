@@ -1,0 +1,22 @@
+@import "../../stylesheets/variables";
+
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 $mobile-paddingH;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: $white;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+
+  .title {
+    strong {
+      font-size: 18px;
+      color: $black;
+      text-transform: capitalize;
+    }
+  }
+}

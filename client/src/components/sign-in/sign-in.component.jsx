@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
+import { ReactComponent as ForwardIcon } from "../../assets/forward.svg";
+import { ReactComponent as GoogleIcon } from "../../assets/google.svg";
+
 import {
   googleSignInStart,
   emailSignInStart,
@@ -11,7 +14,7 @@ import {
 
 import "./sign-in.styles.scss";
 
-const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+const SignIn = ({ emailSignInStart, googleSignInStart, newUser_handler }) => {
   const [userCredentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -31,38 +34,53 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   };
 
   return (
-    <div className="sign-in">
-      <h2>I already have an account</h2>
-      <span>Sign in with your email and password</span>
+    <div className="sign-in  _inner">
+      <strong className="title">
+        welcome
+        <br />
+        back
+      </strong>
+      <div className="_row">
+        <form onSubmit={handleSubmit}>
+          <FormInput
+            name="email"
+            type="email"
+            handleChange={handleChange}
+            value={email}
+            label="email"
+            required
+          />
+          <FormInput
+            name="password"
+            type="password"
+            value={password}
+            handleChange={handleChange}
+            label="password"
+            required
+          />
+          <div className="group-btn">
+            <strong> Sign in </strong>
+            <button type="submit">
+              <ForwardIcon />
+            </button>
+          </div>
+        </form>
 
-      <form onSubmit={handleSubmit}>
-        <FormInput
-          name="email"
-          type="email"
-          handleChange={handleChange}
-          value={email}
-          label="email"
-          required
-        />
-        <FormInput
-          name="password"
-          type="password"
-          value={password}
-          handleChange={handleChange}
-          label="password"
-          required
-        />
-        <div className="buttons">
-          <CustomButton type="submit"> Sign in </CustomButton>
-          <CustomButton
-            type="button"
-            onClick={googleSignInStart}
-            isGoogleSignIn
-          >
-            Sign in with Google
-          </CustomButton>
+        <div className="line">
+          <span>Or login with social account</span>
         </div>
-      </form>
+
+        <div className="social-btns">
+          <button className="google-btn" onClick={googleSignInStart}>
+            <GoogleIcon />
+            Sign in with Google
+          </button>
+        </div>
+        <div className="other-links">
+          <button className="link" onClick={newUser_handler}>sign Up</button>
+          <button className="link">forgot password</button>
+        </div>
+      </div>
     </div>
   );
 };

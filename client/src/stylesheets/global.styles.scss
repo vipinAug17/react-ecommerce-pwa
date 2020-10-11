@@ -1,17 +1,19 @@
+@import "./variables";
+@import "./resets";
+
 body {
-  font-family: "Open Sans Condensed";
-  padding: 20px 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: $font-Regular;
+  overflow-x: hidden;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-* {
-  box-sizing: border-box;
+
+.app-container {
+  // padding-bottom: $mobile-menu-height;
+  background-color: $background;
 }
 
 @media screen and (max-width: 800px) {
   body {
-    padding: 10px;
   }
 }
