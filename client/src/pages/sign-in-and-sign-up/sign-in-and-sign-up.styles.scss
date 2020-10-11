@@ -1,7 +1,7 @@
 @import "../../stylesheets/variables";
 
 .signInAndSignUpContainer {
-  padding: 20px $mobile-paddingH;
+  padding: 20px $mobile-paddingH 40px $mobile-paddingH;
   width: 100%;
   height: 100vh;
   position: fixed;

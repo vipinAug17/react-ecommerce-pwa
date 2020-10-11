@@ -6,16 +6,25 @@
     width: 100%;
     overflow: hidden;
     overflow-x: auto;
+    position: sticky;
+    top: 0;
+
     img {
       width: 70vw;
       margin-right: 5px;
     }
   }
 
+  .page-overlay {
+    position: relative;
+    background: $background;
+    padding-top: 22px;
+  }
+
   .collection-footer {
     padding: 0 $mobile-paddingH;
     margin-bottom: 16px;
-    margin-top: 22px;
+    margin-top: 7px;
     .name {
       font-size: 24px;
     }
@@ -54,7 +63,7 @@
     padding: 20px $mobile-paddingH;
     display: flex;
     justify-content: space-between;
-    background-color: $white;
+    background-color: $background;
     svg {
       width: 20px;
       height: 20px;
@@ -105,13 +114,14 @@
         padding-left: $mobile-paddingH;
       }
       .collection-item {
-        width: 170px;
+        width: 160px;
         margin-right: 20px;
+        flex-shrink: 0;
         &:last-child {
           margin-right: 0px;
         }
         .fav {
-          bottom: 85px;
+          bottom: 55px;
         }
       }
       .collection-footer {

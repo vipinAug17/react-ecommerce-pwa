@@ -15,8 +15,7 @@ const CollectionItem = ({ item, addItem, history, linkUrl, match }) => {
   const { name, price, imageUrl } = item;
 
   return (
-    <div className="collection-item">
-    <button onClick={history.goBack}>go back</button>
+    <div className="collection-item"> 
       <div
         className="clickable"
         onClick={() =>
