@@ -20,9 +20,9 @@ const MobileMenu = ({ currentUser }) => {
         <HomeIcon />
         <small>home</small>
       </NavLink>
-      <NavLink exact activeClassName="active" className="item" to="/shop">
+      <NavLink exact activeClassName="active" className="item" to="/checkout">
         <ShopIcon />
-        <small>shop</small>
+        <small>checkout</small>
       </NavLink>
       <NavLink exact activeClassName="active" className="item" to="/wishlist">
         <HeartIcon />

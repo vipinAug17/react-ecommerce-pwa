@@ -1,0 +1,17 @@
+@import "../../stylesheets/variables";
+
+.btn-stripe {
+  width: 200px;
+  height: 50px;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: $font-Medium;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  color: $white;
+}
