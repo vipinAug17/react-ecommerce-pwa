@@ -6,7 +6,7 @@ import Directory from "../../components/directory/directory.component";
 import "./homepage.styles.scss";
 
 const HomePage = () => (
-  <div className="homePageContainer">
+  <div className="homePageContainer pg-Menu">
     <Directory />
     <MobileMenu />
   </div>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
+import FormInput from "../form-input/form-input.component"; 
+import HeaderPage from "../../components/header-page/header-page.component";
 
 import { ReactComponent as ForwardIcon } from "../../assets/forward.svg";
 import { ReactComponent as GoogleIcon } from "../../assets/google.svg";
@@ -34,13 +34,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart, newUser_handler }) => {
   };
 
   return (
-    <div className="sign-in  _inner">
-      <strong className="title">
-        welcome
-        <br />
-        back
-      </strong>
-      <div className="_row">
+    <HeaderPage title="welcome back" menuHide titleHide cartHide>
+      <div className="sign-in">
         <form onSubmit={handleSubmit}>
           <FormInput
             name="email"
@@ -77,11 +72,13 @@ const SignIn = ({ emailSignInStart, googleSignInStart, newUser_handler }) => {
           </button>
         </div>
         <div className="other-links">
-          <button className="link" onClick={newUser_handler}>sign Up</button>
+          <button className="link" onClick={newUser_handler}>
+            sign Up
+          </button>
           <button className="link">forgot password</button>
         </div>
       </div>
-    </div>
+    </HeaderPage>
   );
 };
 

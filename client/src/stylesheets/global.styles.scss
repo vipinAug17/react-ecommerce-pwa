@@ -6,11 +6,25 @@ body {
   font-size: 16px;
   font-weight: $font-Regular;
   overflow-x: hidden;
+  background-color: $background;
 }
 
 .app-container {
-  // padding-bottom: $mobile-menu-height;
-  background-color: $background;
+}
+
+.pg-space {
+  padding: 0px $mobile-paddingH 20px $mobile-paddingH;
+  min-height: 100vh;
+}
+
+.pg-space-Menu {
+  padding: 0px $mobile-paddingH $mobile-menu-height $mobile-paddingH;
+  min-height: 100vh;
+}
+
+.pg-Menu {
+  padding: 0 0 $mobile-menu-height 0;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 800px) {

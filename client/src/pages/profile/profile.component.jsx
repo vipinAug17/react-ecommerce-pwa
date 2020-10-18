@@ -1,19 +1,18 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React from "react"; 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import { signOutStart } from "../../redux/user/user.actions";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 
+import HeaderPage from "../../components/header-page/header-page.component";
+
 import { ReactComponent as CheveronLeft } from "../../assets/chevron-left.svg";
 
 import "./profile.styles.scss";
 
 const Profile = ({ signOutStart, currentUser }) => {
-  const history = useHistory();
   const { displayName, email } = currentUser;
-  console.log("user ... ", currentUser);
   const name_img = displayName
     .split(" ")
     .map((name) => name[0])
@@ -21,12 +20,8 @@ const Profile = ({ signOutStart, currentUser }) => {
     .slice(0, 2);
 
   return (
-    <div className="profile-page">
-      <button className="back" onClick={() => history.goBack()}>
-        <CheveronLeft />
-      </button>
-      <div className="_inner">
-        <strong className="title">My profile</strong>
+    <div className="profile-page pg-space">
+      <HeaderPage title="my profile"> 
         <div className="user-info">
           <div className="img">{name_img}</div>
           <div className="col">
@@ -62,7 +57,7 @@ const Profile = ({ signOutStart, currentUser }) => {
         <button className="logout_btn" onClick={signOutStart}>
           logout
         </button>
-      </div>
+      </HeaderPage>
     </div>
   );
 };

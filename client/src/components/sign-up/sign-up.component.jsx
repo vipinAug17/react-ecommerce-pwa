@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 
 import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
+import HeaderPage from "../header-page/header-page.component";
 
 import { ReactComponent as ForwardIcon } from "../../assets/forward.svg";
 
@@ -37,13 +37,8 @@ const SignUp = ({ signUpStart, newUser_handler }) => {
   };
 
   return (
-    <div className="sign-up _inner">
-      <strong className="title">
-        create
-        <br />
-        account
-      </strong>
-      <div className="_row">
+    <HeaderPage title="create account" menuHide titleHide cartHide>
+      <div className="sign-up">
         <form className="sign-up-form" onSubmit={handleSubmit}>
           <FormInput
             type="text"
@@ -85,10 +80,12 @@ const SignUp = ({ signUpStart, newUser_handler }) => {
           </div>
         </form>
         <div className="other-links">
-          <button className="link" onClick={newUser_handler}>sign in</button>
+          <button className="link" onClick={newUser_handler}>
+            sign in
+          </button>
         </div>
       </div>
-    </div>
+    </HeaderPage>
   );
 };
 

@@ -1,6 +1,8 @@
+@import "../../stylesheets/variables";
+
 .cart-icon {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   position: relative;
   display: flex;
   align-items: center;
@@ -15,7 +17,17 @@
   .item-count {
     position: absolute;
     font-size: 10px;
-    font-weight: bold;
-    bottom: 12px;
+    top: -7px;
+    right: -5px;
+    padding: 3px;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1px;
+    background-color: $hot;
+    color: $white;
   }
 }

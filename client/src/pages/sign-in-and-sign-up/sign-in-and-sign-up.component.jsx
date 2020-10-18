@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react"; 
 
 import SignIn from "../../components/sign-in/sign-in.component";
 import SignUp from "../../components/sign-up/sign-up.component";
 
-import { ReactComponent as CheveronLeft } from "../../assets/chevron-left.svg";
-
 import "./sign-in-and-sign-up.styles.scss";
 
-const SignInAndSignUpPage = () => {
-  const history = useHistory();
+const SignInAndSignUpPage = () => { 
   const [newUser, setNewuser] = useState(false);
 
   const newUser_handler = () => {
@@ -17,10 +13,7 @@ const SignInAndSignUpPage = () => {
   };
 
   return (
-    <div className="signInAndSignUpContainer">
-      <button className="back" onClick={() => history.goBack()}>
-        <CheveronLeft />
-      </button>
+    <div className="signInAndSignUpContainer pg-space">
       {newUser ? (
         <SignUp newUser_handler={newUser_handler} />
       ) : (

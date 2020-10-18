@@ -1,26 +1,7 @@
 @import "../../stylesheets/variables";
 
 .profile-page {
-  padding: 20px $mobile-paddingH 40px $mobile-paddingH;
   width: 100%;
-  min-height: 100vh;
-  .back {
-    position: absolute;
-  }
-  ._inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 0px 20px 0px;
-    height: 100%;
-    color: $black;
-  }
-  .title {
-    font-size: 34px;
-    font-weight: $font-Medium;
-    text-transform: capitalize;
-    margin-bottom: 40px;
-  }
 
   .user-info {
     display: flex;

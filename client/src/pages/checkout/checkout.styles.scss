@@ -2,26 +2,8 @@
 
 $checkout-footer: 80px;
 
-.checkoutPageContainer {
-  padding: 20px $mobile-paddingH;
+.checkoutPageContainer { 
   margin-bottom: $checkout-footer;
-  .back {
-    position: absolute;
-  }
-  ._inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 0px 20px 0px;
-    height: 100%;
-    color: $black;
-  }
-  .title {
-    font-size: 34px;
-    font-weight: $font-Medium;
-    text-transform: capitalize;
-    margin-bottom: 40px;
-  }
 
   .totalContainer {
     position: fixed;

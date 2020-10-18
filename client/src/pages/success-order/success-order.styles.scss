@@ -1,0 +1,32 @@
+@import "../../stylesheets/variables";
+
+.success-order-page {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+.center-box {
+    text-align: center;
+    width: 250px;
+  }
+  strong {
+    margin-top: 50px;
+    font-size: 34px;
+    font-weight: $font-Medium;
+    color: $black;
+  }
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: $gray;
+  }
+  .custom-button {
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      max-width: 250px;
+  }
+}

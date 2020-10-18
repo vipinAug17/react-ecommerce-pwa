@@ -6,6 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import Header from './components/header/header.component';
 import MobileHeader from './components/mobile-header/mobile-header.component';
 import MobileMenu from './components/mobile-menu/mobile-menu.component';
+import MenuPopup from './components/menu-popup/menu-popup.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
@@ -21,6 +22,7 @@ const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up/sign-
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 const Profile = lazy(() => import('./pages/profile/profile.component'));
 const Wishlist = lazy(() => import('./pages/wishlist/wishlist.component'));
+const SuccessOrder = lazy(() => import('./pages/success-order/success-order.component'));
 
 
 const App = ({ checkUserSession, currentUser }) => {
@@ -31,7 +33,7 @@ const App = ({ checkUserSession, currentUser }) => {
   return (
     <main className="app-container">
 
-    {/*
+      {/*
       <MobileHeader />
       <Header />  
     */}
@@ -43,6 +45,7 @@ const App = ({ checkUserSession, currentUser }) => {
             <Route path='/product/:productId' component={ProductPage} />
             <Route exact path='/checkout' component={CheckoutPage} />
             <Route exact path='/wishlist' component={Wishlist} />
+            <Route exact path='/SuccessOrder' component={SuccessOrder} />
             <Route exact path='/profile'
               render={() =>
                 currentUser ?
@@ -60,8 +63,8 @@ const App = ({ checkUserSession, currentUser }) => {
           </Suspense>
         </ErrorBoundary>
       </Switch>
-
       {/*
+        <MenuPopup />
         <MobileMenu />
       */}
     </main>

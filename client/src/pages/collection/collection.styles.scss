@@ -2,14 +2,8 @@
 
 .collectionPageContainer {
   display: flex;
-  flex-direction: column;
-  padding: 0 $mobile-paddingH;
-}
-
-.collectionTitle {
-  font-size: 38px;
-  margin: 20px 0 25px 0;
-}
+  flex-direction: column; 
+} 
 
 .collectionItemsContainer {
   display: grid;

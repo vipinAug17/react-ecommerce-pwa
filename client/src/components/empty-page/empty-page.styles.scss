@@ -1,0 +1,33 @@
+@import "../../stylesheets/variables";
+
+.empty-pgae {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  .icon {
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .heading {
+    margin-top: 38px;
+    font-size: 28px;
+    color: $black;
+    font-weight: $font-Medium;
+  }
+  .para {
+    margin-top: 17px;
+    font-size: 17px;
+    line-height: 20px;
+    color: $gray;
+  }
+}

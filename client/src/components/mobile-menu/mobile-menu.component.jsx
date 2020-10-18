@@ -8,8 +8,7 @@ import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { ReactComponent as HomeIcon } from "../../assets/home.svg";
 import { ReactComponent as ProfileIcon } from "../../assets/profile.svg";
 import { ReactComponent as ShopIcon } from "../../assets/shop.svg";
-import { ReactComponent as HeartIcon } from "../../assets/heart.svg";
-import { ReactComponent as ShopbagIcon } from "../../assets/shop-bag.svg";
+import { ReactComponent as HeartIcon } from "../../assets/heart.svg"; 
 
 import "./mobile-menu.styles.scss";
 
